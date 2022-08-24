@@ -9,6 +9,8 @@ const bookRouter = require("../Routes/bookRouter");
 
 const app = express();
 
+app.use(express.json());
+
 app.use("/api/v1/books", bookRouter);
 
 app.all("*", (req, res, next) => {
